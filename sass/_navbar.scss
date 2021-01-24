@@ -1,0 +1,89 @@
+// Navbar header
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    z-index: 1;
+    backdrop-filter: blur(5px); //
+
+    & a {
+        text-decoration: none;
+        color: #111111;
+        font-size: 2rem;
+    }
+
+}
+
+.menu-items {
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+    & li a {
+        font-size: 1rem;
+        padding: 0.5em 1em;
+        transition: background 0.3s ease-in-out, color 0.3s ease-in-out; //
+        
+        &:hover {
+            background-color: #ccc7d3;
+        }
+    }
+}
+
+// hamburger menu button
+.menu-btn {
+    position: relative;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    z-index: 1;
+
+    &__lines {
+        width: 1.5rem;
+        height: 0.1rem;
+        background-color: #111111;
+        transition: all 0.5s ease-in-out;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 1.5rem;
+            height: 0.1rem;
+            background-color: #111111;
+            transition: all 0.5s ease-in-out;
+        }
+
+        &::before {
+            transform: translateY(-0.5rem);
+        }
+
+        &::after {
+            transform: translateY(0.5em);
+        }
+    }
+}
+
+// hamburger menu animation
+.menu-btn.open  .menu-btn__lines {
+    transform: translateX(2rem);
+    background-color: transparent; // actual element in the middle
+
+    &::before {
+        transform: rotate(45deg) translate(-1.5rem, 1.5rem);
+        background-color: #ffffff;
+    }
+    &::after {
+        transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
+        background-color: #ffffff;
+        
+    }
+}

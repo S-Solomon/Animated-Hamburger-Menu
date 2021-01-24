@@ -1,0 +1,126 @@
+@import 'navbar' ;
+@import 'mediaqueries' ;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Montserrat, sans-serif;
+}
+
+
+// section
+.section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & h1 {
+        font-family: "Titillium Web", serif;
+        font-size: clamp(60px, 8vw, 200px);
+        font-weight: 700;
+        line-height: 3vw;
+        // padding-bottom: 0.5em;
+        color: #ccc7d3;
+        text-transform: uppercase;
+    }
+
+    & h2 {
+        font-size: clamp(18px, 2.5vw, 50px);
+        color: #5a4d70;
+        padding-left: 3rem;
+        text-transform: uppercase;
+    }
+
+    & p {
+        color: #5a4d70;
+        padding-right: 1rem;
+    }
+}
+
+.hero-section {
+    background-color: #dfdbe5;
+    background-color: #DFDBE5;
+    background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.4'%3E%3Cpath d='M50 50c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10s-10-4.477-10-10 4.477-10 10-10zM10 10c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10c0 5.523-4.477 10-10 10S0 25.523 0 20s4.477-10 10-10zm10 8c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8zm40 40c4.418 0 8-3.582 8-8s-3.582-8-8-8-8 3.582-8 8 3.582 8 8 8z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+
+    & .hero-col {
+        padding: clamp(1rem, 8vw, 5rem);
+        max-width: 50%;
+    }
+
+    & img {
+        width: clamp(250px, 30vw, 500px);
+        transform: scaleX(-1);
+    }
+}
+
+// another section
+.another-col {
+    width: clamp(300px, 50vw, 600px);
+}
+
+// custom shape divider
+
+.custom-shape-divider-bottom-1611502450 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1611502450 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 128px;
+}
+
+.custom-shape-divider-bottom-1611502450 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/** For tablet devices **/
+@media (max-width: 1023px) {
+    .custom-shape-divider-bottom-1611502450 svg {
+        width: calc(143% + 1.3px);
+        height: 128px;
+    }
+
+    .hero-col {
+        max-width: 100%;
+        width: clamp(300px, 50vw, 600px);
+        padding: 0;
+    }
+
+    .hero-img {
+       display: none; 
+    }
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1611502450 svg {
+        width: calc(196% + 1.3px);
+        height: 142px;
+    }
+}
+
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1611502450 {
+        width: calc(250% + 1.3px);
+        height: 150px;
+    }
+
+    .header a {
+        font-size: 1rem;
+    }
+}
