@@ -3,6 +3,10 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Titillium+Web:wght@400;700&display=swap");
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -123,4 +127,20 @@ body {
     .header a {
         font-size: 1rem;
     }
+}
+
+
+// scroll top 
+.gotopbtn {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    width: 50px;
+    height: 50px;
+
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    font-size: 25px;
+    cursor: pointer;
 }
